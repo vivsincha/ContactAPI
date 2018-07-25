@@ -13,6 +13,6 @@ namespace Contact.Model
         public string LastName { get; set; }
         public string EmailId { get; set; }
         public string PhoneNum { get; set; }
-        public char status { get; set; } // Active or Incative i.e A or I
+        public bool IsActive { get; set; }
     }
 }

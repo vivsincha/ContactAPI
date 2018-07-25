@@ -1,0 +1,23 @@
+﻿[
+  {
+    "FirstName": "Manmohan",
+    "LastName": "Singh",
+    "EmailId": "abc@gmail.com",
+    "PhoneNum": "23984923",
+    "IsActive": "true"
+  },
+  {
+    "FirstName": "Vivek",
+    "LastName": "Chauhan",
+    "EmailId": "xyz@gmail.com",
+    "PhoneNum": "23984923",
+    "IsActive": "true"
+  },
+  {
+    "FirstName": "Rahul",
+    "LastName": "Gandhi",
+    "EmailId": "ccc@gmail.com",
+    "PhoneNum": "23984923",
+    "IsActive": "true"
+  }
+]

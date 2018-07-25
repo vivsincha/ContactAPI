@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Contacts", "API_Contact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.Model", "Contact.Model\Contact.Model.csproj", "{EF2DFD38-6A43-4E87-9007-0EF96A081C82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contact.DAL", "Contact.DAL\Contact.DAL.csproj", "{77A5489B-03C1-439B-ADF3-E4EC6913F180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EF2DFD38-6A43-4E87-9007-0EF96A081C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF2DFD38-6A43-4E87-9007-0EF96A081C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF2DFD38-6A43-4E87-9007-0EF96A081C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A5489B-03C1-439B-ADF3-E4EC6913F180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A5489B-03C1-439B-ADF3-E4EC6913F180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A5489B-03C1-439B-ADF3-E4EC6913F180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A5489B-03C1-439B-ADF3-E4EC6913F180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

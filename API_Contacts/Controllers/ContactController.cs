@@ -11,20 +11,20 @@ namespace API_Contacts.Controllers
 {
     public class ContactController : ApiController
     {
-        private IRepository<ContactDetail> _Contactrepository = null;
-        public ContactController()
+        private IRepository<ContactDetails> _contactRepository = null;
+        public ContactController(IRepository<ContactDetails> contactRepo)
         {
-            this._Contactrepository = new Repository<ContactDetail>();
+            _contactRepository = contactRepo;
         }
-       /// <summary>  
+        /// <summary>  
         /// Get Contact List  
         /// </summary>  
         /// <returns></returns>  
         [Route("api/GetContacts")]
         [HttpGet]
-    public HttpResponseMessage GetContactDetail()
+        public HttpResponseMessage GetContactDetail()
         {
-            var result = _Contactrepository.GetAll();
+            var result = _contactRepository.GetAll();
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
             return response;
         }
@@ -37,7 +37,7 @@ namespace API_Contacts.Controllers
         [HttpGet]
         public HttpResponseMessage GetContact(int ContactId)
         {
-            var result = _Contactrepository.GetById(ContactId);
+            var result = _contactRepository.GetById(ContactId);
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
             return response;
         }
@@ -50,7 +50,7 @@ namespace API_Contacts.Controllers
         [HttpGet]
         public HttpResponseMessage DeleteContact(int ContactId)
         {
-            var result = _Contactrepository.Delete(ContactId);
+            var result = _contactRepository.Delete(ContactId);
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
             return response;
         }
@@ -61,9 +61,9 @@ namespace API_Contacts.Controllers
         /// <returns></returns>  
         [Route("api/UpdateContact")]
         [HttpGet]
-        public HttpResponseMessage UpdateContact(ContactDetail cd)
+        public HttpResponseMessage UpdateContact(ContactDetails cd)
         {
-            var result = _Contactrepository.Update(cd);
+            var result = _contactRepository.Update(cd);
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
             return response;
         }
