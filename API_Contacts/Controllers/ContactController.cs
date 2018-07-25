@@ -4,35 +4,68 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Contact.Model;
+using API_Contacts.Repository;
 
 namespace API_Contacts.Controllers
 {
     public class ContactController : ApiController
     {
-        public IEnumerable<string> GetContactList()
+        private IRepository<ContactDetail> _Contactrepository = null;
+        public ContactController()
         {
-            return new string[] { "value1", "value2" };
+            this._Contactrepository = new Repository<ContactDetail>();
         }
-
-        // GET api/values/5
-        public string Get(int id)
+       /// <summary>  
+        /// Get Contact List  
+        /// </summary>  
+        /// <returns></returns>  
+        [Route("api/GetContacts")]
+        [HttpGet]
+    public HttpResponseMessage GetContactDetail()
         {
-            return "value";
+            var result = _Contactrepository.GetAll();
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+            return response;
         }
-
-        // POST api/values
-        public void Post([FromBody]string value)
+        /// <summary>  
+        /// Get Contact Detail  
+        /// </summary>  
+        /// <param name="ContactId"></param>  
+        /// <returns></returns>  
+        [Route("api/GetContact")]
+        [HttpGet]
+        public HttpResponseMessage GetContact(int ContactId)
         {
+            var result = _Contactrepository.GetById(ContactId);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+            return response;
         }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        /// <summary>  
+        /// Delete Contact Detail  
+        /// </summary>  
+        /// <param name="ContactId"></param>  
+        /// <returns></returns>  
+        [Route("api/DeleteContact")]
+        [HttpGet]
+        public HttpResponseMessage DeleteContact(int ContactId)
         {
+            var result = _Contactrepository.Delete(ContactId);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+            return response;
         }
-
-        // DELETE api/values/5
-        public void Delete(int id)
+        /// <summary>  
+        /// UpdateContact Detail  
+        /// </summary>  
+        /// <param name="ContactId"></param>  
+        /// <returns></returns>  
+        [Route("api/UpdateContact")]
+        [HttpGet]
+        public HttpResponseMessage UpdateContact(ContactDetail cd)
         {
+            var result = _Contactrepository.Update(cd);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+            return response;
         }
     }
 }

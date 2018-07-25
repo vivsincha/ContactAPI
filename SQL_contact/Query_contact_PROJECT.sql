@@ -1,0 +1,9 @@
+--create table ContactDetails
+--(
+--	ContactId int IDENTITY(1,1) PRIMARY KEY,
+--    FirstName varchar(255),
+--	LastName varchar(255) NOT NULL,
+--    emailId varchar(255),
+--	PhoneNum varchar(255) NOT NULL,
+--	StatusCd varchar(10)
+--);
