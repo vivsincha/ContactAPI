@@ -1,9 +1,10 @@
-D:\apicontactrepo\Contact.DAL\obj\Debug\Contact.DAL.csprojResolveAssemblyReference.cache
+D:\apicontactrepo\Contact.DAL\bin\Debug\FileAdaptor\DummyData\ContactsData.json
 D:\apicontactrepo\Contact.DAL\bin\Debug\Contact.DAL.dll
 D:\apicontactrepo\Contact.DAL\bin\Debug\Contact.DAL.pdb
 D:\apicontactrepo\Contact.DAL\bin\Debug\Contact.Model.dll
 D:\apicontactrepo\Contact.DAL\bin\Debug\Newtonsoft.Json.dll
 D:\apicontactrepo\Contact.DAL\bin\Debug\Contact.Model.pdb
 D:\apicontactrepo\Contact.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\apicontactrepo\Contact.DAL\obj\Debug\Contact.DAL.csprojResolveAssemblyReference.cache
 D:\apicontactrepo\Contact.DAL\obj\Debug\Contact.DAL.dll
 D:\apicontactrepo\Contact.DAL\obj\Debug\Contact.DAL.pdb

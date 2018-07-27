@@ -1,4 +1,3 @@
-D:\apicontactrepo\API_Contacts\obj\Debug\API_Contacts.csprojResolveAssemblyReference.cache
 D:\apicontactrepo\API_Contacts\bin\ApplicationInsights.config
 D:\apicontactrepo\API_Contacts\bin\roslyn\csc.exe
 D:\apicontactrepo\API_Contacts\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -12,6 +11,7 @@ D:\apicontactrepo\API_Contacts\bin\roslyn\System.Reflection.Metadata.dll
 D:\apicontactrepo\API_Contacts\bin\roslyn\vbc.exe
 D:\apicontactrepo\API_Contacts\bin\roslyn\VBCSCompiler.exe
 D:\apicontactrepo\API_Contacts\bin\roslyn\VBCSCompiler.exe.config
+D:\apicontactrepo\API_Contacts\bin\FileAdaptor\DummyData\ContactsData.json
 D:\apicontactrepo\API_Contacts\bin\API_Contacts.dll.config
 D:\apicontactrepo\API_Contacts\bin\API_Contacts.dll
 D:\apicontactrepo\API_Contacts\bin\API_Contacts.pdb
@@ -30,6 +30,9 @@ D:\apicontactrepo\API_Contacts\bin\Microsoft.ApplicationInsights.dll
 D:\apicontactrepo\API_Contacts\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\apicontactrepo\API_Contacts\bin\Microsoft.Web.Infrastructure.dll
 D:\apicontactrepo\API_Contacts\bin\Newtonsoft.Json.dll
+D:\apicontactrepo\API_Contacts\bin\Ninject.dll
+D:\apicontactrepo\API_Contacts\bin\Ninject.Web.Common.dll
+D:\apicontactrepo\API_Contacts\bin\Ninject.WebApi.DependencyResolver.dll
 D:\apicontactrepo\API_Contacts\bin\System.Net.Http.Formatting.dll
 D:\apicontactrepo\API_Contacts\bin\System.Web.Helpers.dll
 D:\apicontactrepo\API_Contacts\bin\System.Web.Http.dll
@@ -40,6 +43,7 @@ D:\apicontactrepo\API_Contacts\bin\System.Web.Razor.dll
 D:\apicontactrepo\API_Contacts\bin\System.Web.WebPages.Deployment.dll
 D:\apicontactrepo\API_Contacts\bin\System.Web.WebPages.dll
 D:\apicontactrepo\API_Contacts\bin\System.Web.WebPages.Razor.dll
+D:\apicontactrepo\API_Contacts\bin\WebActivator.dll
 D:\apicontactrepo\API_Contacts\bin\WebGrease.dll
 D:\apicontactrepo\API_Contacts\bin\Contact.DAL.pdb
 D:\apicontactrepo\API_Contacts\bin\Contact.Model.pdb
@@ -52,6 +56,10 @@ D:\apicontactrepo\API_Contacts\bin\Microsoft.AI.Web.xml
 D:\apicontactrepo\API_Contacts\bin\Microsoft.AI.WindowsServer.xml
 D:\apicontactrepo\API_Contacts\bin\Microsoft.ApplicationInsights.xml
 D:\apicontactrepo\API_Contacts\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\apicontactrepo\API_Contacts\bin\Ninject.pdb
+D:\apicontactrepo\API_Contacts\bin\Ninject.xml
+D:\apicontactrepo\API_Contacts\bin\Ninject.Web.Common.pdb
+D:\apicontactrepo\API_Contacts\bin\Ninject.Web.Common.xml
 D:\apicontactrepo\API_Contacts\bin\System.Web.Helpers.xml
 D:\apicontactrepo\API_Contacts\bin\System.Web.Mvc.xml
 D:\apicontactrepo\API_Contacts\bin\System.Web.Optimization.xml
@@ -63,13 +71,6 @@ D:\apicontactrepo\API_Contacts\bin\Newtonsoft.Json.xml
 D:\apicontactrepo\API_Contacts\bin\System.Net.Http.Formatting.xml
 D:\apicontactrepo\API_Contacts\bin\System.Web.Http.xml
 D:\apicontactrepo\API_Contacts\bin\System.Web.Http.WebHost.xml
+D:\apicontactrepo\API_Contacts\obj\Debug\API_Contacts.csprojResolveAssemblyReference.cache
 D:\apicontactrepo\API_Contacts\obj\Debug\API_Contacts.dll
 D:\apicontactrepo\API_Contacts\obj\Debug\API_Contacts.pdb
-D:\apicontactrepo\API_Contacts\bin\Ninject.dll
-D:\apicontactrepo\API_Contacts\bin\Ninject.Web.Common.dll
-D:\apicontactrepo\API_Contacts\bin\Ninject.WebApi.DependencyResolver.dll
-D:\apicontactrepo\API_Contacts\bin\WebActivator.dll
-D:\apicontactrepo\API_Contacts\bin\Ninject.pdb
-D:\apicontactrepo\API_Contacts\bin\Ninject.xml
-D:\apicontactrepo\API_Contacts\bin\Ninject.Web.Common.pdb
-D:\apicontactrepo\API_Contacts\bin\Ninject.Web.Common.xml

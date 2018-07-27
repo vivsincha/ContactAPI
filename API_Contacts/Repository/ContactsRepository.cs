@@ -28,24 +28,29 @@ namespace API_Contacts.Repository
             throw new NotImplementedException();
         }
 
-        public ContactDetails Insert(ContactDetails obj)
+        bool IRepository<ContactDetails>.Insert(ContactDetails obj)
+        {
+            return _contactDataAdaptor.Create(obj);
+        }
+        
+       public bool Delete(object Id)
+        {
+            return _contactDataAdaptor.Delete((int)Id);
+        }
+
+        public bool Deactivate(object Id)
         {
             throw new NotImplementedException();
         }
 
-        string IRepository<ContactDetails>.Delete(object Id)
+        bool IRepository<ContactDetails>.Update(ContactDetails obj)
         {
-            throw new NotImplementedException();
+            return _contactDataAdaptor.Update(obj);
         }
 
-        public ContactDetails Update(ContactDetails obj)
+        bool IRepository<ContactDetails>.Delete(object Id)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Save()
-        {
-            throw new NotImplementedException();
+            return _contactDataAdaptor.Delete((int)Id);
         }
     }
 

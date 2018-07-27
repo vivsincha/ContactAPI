@@ -8,7 +8,7 @@ namespace Contact.Model
 {
     public class ContactDetails
     {
-        //public int ContactId { get; set; }
+        public int ContactId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailId { get; set; }

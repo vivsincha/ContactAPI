@@ -10,9 +10,9 @@ namespace API_Contacts.Repository
     {
         IEnumerable<T> GetAll();
         T GetById(object Id);
-        T Insert(T obj);
-        string Delete(object Id);
-        T Update(T obj);
-        void Save();
+        bool Insert(T obj);
+        bool Delete(object Id);
+        bool Update(T obj);
+        bool Deactivate(object Id);
     }
 }
