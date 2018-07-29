@@ -23,9 +23,10 @@ namespace API_Contacts.Repository
             return _contactDataAdaptor.Select();
         }
 
-        ContactDetails IRepository<ContactDetails>.GetById(object Id)
+        public ContactDetails GetById(int Id)
         {
-            throw new NotImplementedException();
+
+            return (ContactDetails)_contactDataAdaptor.SelectById(Id);
         }
 
         bool IRepository<ContactDetails>.Insert(ContactDetails obj)
@@ -52,6 +53,13 @@ namespace API_Contacts.Repository
         {
             return _contactDataAdaptor.Delete((int)Id);
         }
+
+        public bool Activate(object Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 
     //public class ContactsRepository<T> : IRepository<T> where T : class

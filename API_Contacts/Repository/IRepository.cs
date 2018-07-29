@@ -9,10 +9,11 @@ namespace API_Contacts.Repository
     public interface IRepository<T> where T: class
     {
         IEnumerable<T> GetAll();
-        T GetById(object Id);
+        object GetById(int Id);
         bool Insert(T obj);
         bool Delete(object Id);
         bool Update(T obj);
         bool Deactivate(object Id);
+        bool Activate(object Id);
     }
 }

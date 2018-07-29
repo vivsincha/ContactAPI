@@ -11,6 +11,7 @@ namespace Contact.DAL
     {
         bool Create(ContactDetails contactDetails);
         List<ContactDetails> Select();
+        Object SelectById(int id);
         bool Update(ContactDetails contactDetails);
         bool Delete(int id);
         bool Activate(int id);

@@ -24,9 +24,17 @@ namespace API_Contacts.Controllers
         [HttpGet]
         public HttpResponseMessage GetContactDetail()
         {
-            var result = _contactRepository.GetAll();
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.GetAll();
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
         /// <summary>  
         /// Get Contact Detail  
@@ -37,9 +45,17 @@ namespace API_Contacts.Controllers
         [HttpGet]
         public HttpResponseMessage GetContact(int ContactId)
         {
-            var result = _contactRepository.GetById(ContactId);
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.GetById(ContactId);
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
         /// <summary>  
         /// Delete Contact Detail  
@@ -50,18 +66,34 @@ namespace API_Contacts.Controllers
         [HttpPost]
         public HttpResponseMessage InsertContact(ContactDetails cd)
         {
-            var result = _contactRepository.Insert(cd);
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.Insert(cd);
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
 
         [Route("api/DeleteContact/{id}")]
         [HttpPost]
         public HttpResponseMessage DeleteContact(int id)
         {
-            var result = _contactRepository.Delete(id);
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.Delete(id);
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
         /// <summary>  
         /// UpdateContact Detail  
@@ -72,27 +104,51 @@ namespace API_Contacts.Controllers
         [HttpPost]
         public HttpResponseMessage UpdateContact(ContactDetails cd)
         {
-            var result = _contactRepository.Update(cd);
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.Update(cd);
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
 
         [Route("api/DeactivateContact/{id}")]
         [HttpPost]
         public HttpResponseMessage DeactivateContact(int id)
         {
-            var result = _contactRepository.Deactivate(id);
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.Deactivate(id);
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
 
         [Route("api/ActivateContact/{id}")]
         [HttpPost]
         public HttpResponseMessage ActivateContact(int id)
         {
-            var result = _contactRepository.Deactivate(id);
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
-            return response;
+            try
+            {
+                var result = _contactRepository.Deactivate(id);
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                return response;
+            }
         }
     }
 }

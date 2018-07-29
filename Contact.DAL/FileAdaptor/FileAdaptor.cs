@@ -26,6 +26,21 @@ namespace Contact.DAL.FileAdaptor
                 return new List<ContactDetails>();
         }
 
+        public object SelectById(int id)
+        {
+            if (!File.Exists(_filePath))
+            {
+                List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(File.ReadAllText(_filePath));
+                if (lstcontact.Find(x => x.ContactId == id) != null)
+                {
+                    return lstcontact.Find(x => x.ContactId == id);
+                }
+                return null;
+            }
+            else
+                return null;
+        }
+
         public bool Create(ContactDetails contactDetails)
         {
             if (!File.Exists(_filePath))
