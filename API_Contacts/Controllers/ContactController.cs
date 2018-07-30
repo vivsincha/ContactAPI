@@ -141,7 +141,7 @@ namespace API_Contacts.Controllers
         {
             try
             {
-                var result = _contactRepository.Deactivate(id);
+                var result = _contactRepository.Activate(id);
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
                 return response;
             }

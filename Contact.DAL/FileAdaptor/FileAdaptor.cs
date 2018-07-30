@@ -15,7 +15,6 @@ namespace Contact.DAL.FileAdaptor
         public FileAdaptor()
         {
             _filePath = AppDomain.CurrentDomain.BaseDirectory + "bin\\FileAdaptor\\DummyData\\ContactsData.json";
-            
         }
 
         public List<ContactDetails> Select()
@@ -48,8 +47,7 @@ namespace Contact.DAL.FileAdaptor
                 var jsondata = File.ReadAllText(_filePath);
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
                 lstcontact.Add(contactDetails);
-                lstcontact.OrderBy(s=>s.ContactId);
-                jsondata = JsonConvert.SerializeObject(lstcontact);
+                jsondata = JsonConvert.SerializeObject(lstcontact.OrderBy(s => s.ContactId));
                 File.WriteAllText(_filePath, jsondata);
                 return true;
             }
@@ -66,7 +64,7 @@ namespace Contact.DAL.FileAdaptor
                 if (lstcontact.Find(x => x.ContactId == id) != null)
                 {
                     lstcontact.Remove(lstcontact.Find(x => x.ContactId == id));
-                    jsondata = JsonConvert.SerializeObject(lstcontact);
+                    jsondata = JsonConvert.SerializeObject(lstcontact.OrderBy(s => s.ContactId));
                     File.WriteAllText(_filePath, jsondata);
                     return true;
                 }
@@ -88,7 +86,7 @@ namespace Contact.DAL.FileAdaptor
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
                 lstcontact.Remove(lstcontact.Find(x => x.ContactId == contactDetails.ContactId));
                 lstcontact.Add(contactDetails);
-                jsondata = JsonConvert.SerializeObject(lstcontact);
+                jsondata = JsonConvert.SerializeObject(lstcontact.OrderBy(s => s.ContactId));
                 File.WriteAllText(_filePath, jsondata);
                 return true;
             }
@@ -103,11 +101,12 @@ namespace Contact.DAL.FileAdaptor
                 var jsondata = File.ReadAllText(_filePath);
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
                 cd = lstcontact.Find(x => x.ContactId == id);
-                if (cd.IsActive == false && lstcontact.Find(x => x.ContactId == id) != null)
+                if (cd.IsActive == false && cd != null)
                 {
                     cd.IsActive = true;
                     lstcontact.Remove(lstcontact.Find(x => x.ContactId == id));
                     lstcontact.Add(cd);
+                    lstcontact.OrderBy(s => s.ContactId);
                     jsondata = JsonConvert.SerializeObject(lstcontact);
                     File.WriteAllText(_filePath, jsondata);
                     return true;
@@ -128,11 +127,12 @@ namespace Contact.DAL.FileAdaptor
                 var jsondata = File.ReadAllText(_filePath);
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
                 cd = lstcontact.Find(x => x.ContactId == id);
-                if (cd.IsActive == true && lstcontact.Find(x => x.ContactId == id) != null)
+                if (cd.IsActive == true && cd != null)
                 {
                     cd.IsActive = false;
                     lstcontact.Remove(lstcontact.Find(x => x.ContactId == id));
                     lstcontact.Add(cd);
+                    lstcontact.OrderBy(s => s.ContactId);
                     jsondata = JsonConvert.SerializeObject(lstcontact);
                     File.WriteAllText(_filePath, jsondata);
                     return true;
