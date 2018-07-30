@@ -21,8 +21,9 @@ namespace API_Contacts.Controllers
         /// </summary>  
         /// <returns></returns>  
         [Route("api/GetContacts")]
+        [Route]
         [HttpGet]
-        public HttpResponseMessage GetContactDetail()
+        public HttpResponseMessage GetContactDetails()
         {
             try
             {
@@ -41,13 +42,13 @@ namespace API_Contacts.Controllers
         /// </summary>  
         /// <param name="ContactId"></param>  
         /// <returns></returns>  
-        [Route("api/GetContact")]
-        [HttpGet]
-        public HttpResponseMessage GetContact(int ContactId)
+        [Route("api/GetContact/{Id}")]
+        [HttpPost]
+        public HttpResponseMessage GetContact(int Id)
         {
             try
             {
-                var result = _contactRepository.GetById(ContactId);
+                var result = _contactRepository.GetById(Id);
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, result);
                 return response;
             }

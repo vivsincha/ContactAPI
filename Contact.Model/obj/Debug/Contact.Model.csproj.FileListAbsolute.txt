@@ -5,6 +5,5 @@ D:\apicontactrepo\Contact.Model\bin\Debug\EntityFramework.dll
 D:\apicontactrepo\Contact.Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\apicontactrepo\Contact.Model\bin\Debug\EntityFramework.xml
 D:\apicontactrepo\Contact.Model\bin\Debug\EntityFramework.SqlServer.xml
-D:\apicontactrepo\Contact.Model\obj\Debug\Contact.Model.csprojResolveAssemblyReference.cache
 D:\apicontactrepo\Contact.Model\obj\Debug\Contact.Model.dll
 D:\apicontactrepo\Contact.Model\obj\Debug\Contact.Model.pdb

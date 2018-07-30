@@ -14,13 +14,13 @@ namespace Contact.DAL.FileAdaptor
         private readonly string _filePath;
         public FileAdaptor()
         {
-            _filePath = AppDomain.CurrentDomain.BaseDirectory + "\\bin\\FileAdaptor\\DummyData\\ContactsData.json";
+            _filePath = AppDomain.CurrentDomain.BaseDirectory + "bin\\FileAdaptor\\DummyData\\ContactsData.json";
             
         }
 
         public List<ContactDetails> Select()
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
                 return JsonConvert.DeserializeObject<List<ContactDetails>>(File.ReadAllText(_filePath));
             else
                 return new List<ContactDetails>();
@@ -28,7 +28,7 @@ namespace Contact.DAL.FileAdaptor
 
         public object SelectById(int id)
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
             {
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(File.ReadAllText(_filePath));
                 if (lstcontact.Find(x => x.ContactId == id) != null)
@@ -43,11 +43,12 @@ namespace Contact.DAL.FileAdaptor
 
         public bool Create(ContactDetails contactDetails)
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
             {
                 var jsondata = File.ReadAllText(_filePath);
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
                 lstcontact.Add(contactDetails);
+                lstcontact.OrderBy(s=>s.ContactId);
                 jsondata = JsonConvert.SerializeObject(lstcontact);
                 File.WriteAllText(_filePath, jsondata);
                 return true;
@@ -58,7 +59,7 @@ namespace Contact.DAL.FileAdaptor
 
         public bool Delete(int id)
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
             {
                 var jsondata = File.ReadAllText(_filePath);
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
@@ -81,7 +82,7 @@ namespace Contact.DAL.FileAdaptor
 
         public bool Update(ContactDetails contactDetails)
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
             {
                 var jsondata = File.ReadAllText(_filePath);
                 List<ContactDetails> lstcontact = JsonConvert.DeserializeObject<List<ContactDetails>>(jsondata);
@@ -96,7 +97,7 @@ namespace Contact.DAL.FileAdaptor
         }
         public bool Activate(int id)
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
             {
                 ContactDetails cd = new ContactDetails();
                 var jsondata = File.ReadAllText(_filePath);
@@ -121,7 +122,7 @@ namespace Contact.DAL.FileAdaptor
         }
         public bool Deactivate(int id)
         {
-            if (!File.Exists(_filePath))
+            if (File.Exists(_filePath))
             {
                 ContactDetails cd = new ContactDetails();
                 var jsondata = File.ReadAllText(_filePath);
